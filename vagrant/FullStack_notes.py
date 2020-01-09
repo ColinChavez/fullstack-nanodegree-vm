@@ -54,4 +54,6 @@
 #301: Permanent REDIRECT - used to send a browser to a different URL
 #404: File Not Found
 
+#Port Forwarding- allows us to open pages in our broser from the web server from our virtual machine
+#as if they were being run locally. Forwarded Ports can be changed in the Vagrant File
 
