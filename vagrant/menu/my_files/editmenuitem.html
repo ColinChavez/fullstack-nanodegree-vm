@@ -1,0 +1,14 @@
+  
+<html>
+<body> 
+<form action= "{{url_for('editMenuItem', restaurant_id = restaurant_id, menu_id=item.id)}}" method = 'POST'>
+    
+<p>Name:</p>
+<input type = 'text' size='30' name = 'name' placeholder = '{{item.name}}'> 
+<!--The placeholder attribute allows you to have the name already filled out with the name of the item you are going to edit-->
+    
+<input type='submit' value='Edit'> <!--Adds a button called "Edit"-->
+</form>
+<a href= '{{url_for('restaurantMenu', restaurant_id= item.restaurant_id)}}'>Cancel</a>
+</body>
+</html>

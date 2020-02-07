@@ -71,3 +71,34 @@ URL BUILDING
 url_for(_,_) one of the many helper functions flask has available to us.
 accepts the name of the function as the first argument, and a number of keywoard arguments
 each corresponding to the variable part of the URL rule.
+
+Good applications and user interfaces, incorporate feedback throughout the user experience. If a user
+does not get enough feedback they'll probably dislike the application.
+
+MESSAGE FLASHING - A feature that will prompt a message to the user immediately after
+a certain action has taken place and then dissapear the next time the page is requested
+
+Flashing works in Flask by using a concept called sessions. Sessions are a way that a
+server can store information across multiple web pages, to create a more personalized user experience.
+
+flash("insert message here) - displays flash messages
+get_flashed_messages() - used to retrieve flash messages
+
+STYLING
+Flask can automatically locate CSS, JAVASCRIPT, and Media Files, if we put them in
+a folder named STATIC.
+
+Responding with web pages is great, but sometimes all that needs to be communicated is
+information. 
+For EX. Let's say there is a 3rd party web application that wants to collect our restaurant menus and 
+advertise them to mobile clients based on their location. The app wants to see the restaurants and menus
+available in our database but doesn't really need to parse throught HTML or waste bandwidth receiving CSS files.
+It just wants the data. For this reason developers have created APIs.
+
+API - (Application Programming Interface) - allow external applications to use public information our applications
+want to share
+RESTful - (Representational State Transfer) - An API that is communicated over the internet 
+following the rules of HTTP
+JSON - (Javascript Object Notation) - One of the most popular ways of sending datat with a 
+restful architecture JSON uses attribute value pairings which are delimited by a colon.
+similar to a key:value pair. Brackets are used to encapsulate individual objects

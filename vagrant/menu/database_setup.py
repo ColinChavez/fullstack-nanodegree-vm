@@ -1,3 +1,4 @@
+import os
 import sys #provides a number of functions and variables that can be used to 
 #manimpulate different parts of the Python run-tim environment
 from sqlalchemy import Column, ForeignKey, Integer, String
@@ -28,6 +29,22 @@ class MenuItem(Base):
     restaurant = relationship(Restaurant)
 #restaurant says look inside the restaurant table and retrieve the ID number whenever I ask for restaurant_id
 #######insert at end of file #######
+
+#Added Flask decorator method below
+#This serializable function will help define what data we want to send across
+#and put it in a format that Flask can easily use.
+#Flask has a built-n package called JSONIFY that will allow us to easily configure
+#an API endpoint for our application.
+@property
+def serialize(self):
+    #Returns object data in easily serializeable format
+    return {
+        'name': self.name,
+        'description': self.description,
+        'id': self.id,
+        'price': self.price,
+        'course': self.course,
+    }
 
 engine = create_engine('sqlite:///restaurantmenu.db') 
 #create an instance of our create_engine class and point to the database
